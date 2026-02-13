@@ -1,4 +1,4 @@
-# Data Collection Visual Threshold Validator - POD 2.0 Extension
+# POD 2.0 Data Collection Visual Threshold Validator
 
 A custom POD 2.0 widget that monitors Data Collection inputs and applies visual threshold validation styling in SAP Digital Manufacturing.
 
@@ -8,6 +8,8 @@ This widget automatically detects Data Collection input fields in your POD and v
 
 - **Green styling** - Value is within the acceptable range
 - **Orange styling** - Value is outside the acceptable range (below min or above max)
+
+<img width="1914" height="505" alt="image" src="https://github.com/user-attachments/assets/d7f36eb9-5901-4c24-a667-2403149e387f" />
 
 **Note:** The widget panel is hidden by default at runtime. The validation styling works even when the panel is not visible.
 
@@ -36,19 +38,23 @@ widget/
 
 1. Navigate to **Manage PODs 2.0** app
 2. Go to **Extensions** tab
-3. Click **Create**
+3. Click **Upload**
 4. Fill in:
    - **Name**: DCThresholdValidator (or your preferred name)
    - **Namespace**: `custom/dcthresholds`
    - **Source Code**: Upload the ZIP file
 5. Click **Create**
 
+<img width="1915" height="713" alt="image" src="https://github.com/user-attachments/assets/3bdc953c-b1f2-4ca5-919a-aacfec0ce185" />
+
 ### 3. Add Widget to POD
 
 1. Open your POD in Design Mode
 2. Find **"DC Threshold Validator"** in the plugin palette under **Custom Widgets** category
-3. Drag and drop it onto your POD layout
+3. Drag and drop it onto your POD layout to the DataCollectionDialog
 4. Save the POD
+
+<img width="1918" height="574" alt="image" src="https://github.com/user-attachments/assets/2c5ace20-2c12-4711-8f93-f51858e29e35" />
 
 ## Configuration
 
@@ -58,6 +64,8 @@ widget/
 | **Enabled** | true | Enable or disable threshold validation |
 | **Show Status Icons** | true | Show validation status icons next to inputs |
 | **Log to Console** | true | Enable console logging for debugging |
+
+<img width="323" height="447" alt="image" src="https://github.com/user-attachments/assets/2368deac-a275-42e0-b8f4-dccdc6f046d7" />
 
 ## Visual Styling
 
@@ -70,6 +78,8 @@ widget/
 - Row: Orange gradient background with orange left border
 - Input: Orange border with light orange background
 - Icon: Orange warning triangle
+
+<img width="1914" height="505" alt="image" src="https://github.com/user-attachments/assets/d7f36eb9-5901-4c24-a667-2403149e387f" />
 
 ## How It Works
 
@@ -118,18 +128,6 @@ The widget looks for threshold values in these properties:
 
 - SAP Digital Manufacturing POD 2.0
 - SAPUI5 libraries (included in DM)
-
-## Comparison with POD 1.0 Version
-
-This POD 2.0 version is a port of the original `extendDataCollectionCapture` extension:
-
-| Feature | POD 1.0 Version | POD 2.0 Version |
-|---------|-----------------|-----------------|
-| Architecture | Plugin Extension | Widget |
-| Integration | Extends DC Entry Plugin | Standalone widget |
-| Configuration | Code-based | POD Designer properties |
-| Deployment | Extension Provider | Manage PODs 2.0 |
-| Default Visibility | Always visible | Hidden by default |
 
 ## Debugging
 
