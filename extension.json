@@ -1,0 +1,9 @@
+{
+    "widgets": [
+        {
+            "modulePath": "custom/dcthresholds/widget/DataCollectionThresholds",
+            "type": "custom.dcthresholds.widget.DataCollectionThresholds"
+        }
+    ],
+    "actions": []
+}
